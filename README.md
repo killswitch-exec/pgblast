@@ -1,6 +1,6 @@
 # pgblast
 
-PostgreSQL security scanner for authorized penetration testing. Performs credential bruteforcing, post-auth reconnaissance, privilege escalation checks, and database/table enumeration.
+PostgreSQL security scanner for penetration testing. Performs credential bruteforcing, post-auth reconnaissance, privilege escalation checks, and database/table enumeration.
 
 ## Requirements
 
