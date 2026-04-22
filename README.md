@@ -11,7 +11,7 @@ pip install psycopg2-binary
 ## Usage
 
 ```bash
-python3 pg_scanner.py --hosts hosts.txt --users users.txt --passwords passwords.txt [options]
+python3 pgblast.py --hosts hosts.txt --users users.txt --passwords passwords.txt [options]
 ```
 
 ### Arguments
@@ -60,18 +60,18 @@ Credentials are tested as a cartesian product — every username against every p
 
 Basic scan:
 ```bash
-python3 pg_scanner.py --hosts hosts.txt --users users.txt --passwords passwords.txt
+python3 pgblast.py --hosts hosts.txt --users users.txt --passwords passwords.txt
 ```
 
 Multiple default ports with verbose output:
 ```bash
-python3 pg_scanner.py --hosts hosts.txt --users users.txt --passwords passwords.txt \
+python3 pgblast.py --hosts hosts.txt --users users.txt --passwords passwords.txt \
   --ports 5432,5433 --verbose
 ```
 
 Full audit with enumeration and JSON report:
 ```bash
-python3 pg_scanner.py --hosts hosts.txt --users users.txt --passwords passwords.txt \
+python3 pgblast.py --hosts hosts.txt --users users.txt --passwords passwords.txt \
   --enumerate --output report.json --verbose
 ```
 

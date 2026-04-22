@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-PostgreSQL Security Scanner
+pgblast — PostgreSQL Security Scanner
 Purpose: Credential bruteforce + post-auth recon + privesc checks for authorized pentests.
-Usage:   python3 pg_scanner.py --hosts hosts.txt --users users.txt --passwords passwords.txt [options]
+Usage:   python3 pgblast.py --hosts hosts.txt --users users.txt --passwords passwords.txt [options]
 """
 
 import argparse
@@ -503,7 +503,7 @@ def save_json(results: list, path: str):
 
 def parse_args():
     p = argparse.ArgumentParser(
-        description="PostgreSQL security scanner — authorized pentests only.",
+        description="pgblast — PostgreSQL security scanner for authorized pentests.",
         formatter_class=argparse.RawTextHelpFormatter,
     )
     p.add_argument("--hosts",     required=True,
@@ -598,7 +598,7 @@ def main():
             unique_targets.append(t)
     targets = unique_targets
 
-    print(f"[*] PostgreSQL Security Scanner")
+    print(f"[*] pgblast — PostgreSQL Security Scanner")
     print(f"[*] Started   : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"[*] Targets   : {len(targets)} host:port pair(s)")
     print(f"[*] Users     : {len(users)}")
